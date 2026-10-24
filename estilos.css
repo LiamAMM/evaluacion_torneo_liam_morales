@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-dark: #07090e;
+    --card-bg: rgba(13, 19, 33, 0.85);
+    --border-color: rgba(0, 242, 254, 0.25);
+    --primary-neon: #00f2fe;
+    --secondary-neon: #4facfe;
+    --accent-red: #ff3366;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --table-header-bg: #0f172a;
+    --table-row-hover: rgba(0, 242, 254, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 2.5rem 1rem;
+    background-image:
+        radial-gradient(circle at 15% 15%, rgba(0, 242, 254, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(255, 51, 102, 0.06) 0%, transparent 40%);
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+header h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--primary-neon) 0%, #ffffff 50%, var(--accent-red) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+}
+
+#torneos {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#torneos h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.75rem;
+    color: var(--text-primary);
+    border-left: 4px solid var(--primary-neon);
+    padding-left: 0.8rem;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.campo-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.campo-texto input {
+    width: 100%;
+    background: rgba(10, 15, 28, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.campo-texto input::placeholder {
+    color: var(--text-muted);
+}
+
+.campo-texto input:focus {
+    outline: none;
+    border-color: var(--primary-neon);
+    background: rgba(15, 23, 42, 1);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+}
+
+.error {
+    font-size: 0.8rem;
+    color: var(--accent-red);
+    font-weight: 500;
+    min-height: 1.1rem;
+}
+
+button {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: linear-gradient(135deg, var(--primary-neon) 0%, var(--secondary-neon) 100%);
+    color: #07090e;
+    border: none;
+    border-radius: 8px;
+    padding: 0.95rem 2.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
+    margin-bottom: 2.5rem;
+    display: inline-block;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 242, 254, 0.5);
+    background: linear-gradient(135deg, var(--secondary-neon) 0%, var(--primary-neon) 100%);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(7, 9, 14, 0.6);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+th {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    background-color: var(--table-header-bg);
+    color: var(--primary-neon);
+    padding: 1.1rem 1.25rem;
+    border-bottom: 2px solid rgba(0, 242, 254, 0.3);
+}
+
+td {
+    padding: 1rem 1.25rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+tbody tr {
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Micro-interacción requerida para las filas */
+tbody tr:hover {
+    background-color: var(--table-row-hover);
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    #torneos {
+        padding: 1.25rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #torneos h2 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+th,
+td {
+    padding: 1rem 1.25rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    vertical-align: middle;
+    /* Alinea los elementos al centro verticalmente */
+}
