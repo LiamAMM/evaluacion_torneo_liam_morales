@@ -219,3 +219,32 @@ td {
     vertical-align: middle;
     /* Alinea los elementos al centro verticalmente */
 }
+
+/* Aplicamos los mismos estilos tanto a los input como al select */
+.campo-texto input,
+.campo-texto select {
+    width: 100%;
+    background: rgba(10, 15, 28, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto de foco para ambos elementos */
+.campo-texto input:focus,
+.campo-texto select:focus {
+    outline: none;
+    border-color: var(--primary-neon);
+    background: rgba(15, 23, 42, 1);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+}
+
+/* Opcional: Asegurar que las opciones internas mantengan una buena legibilidad */
+.campo-texto select option {
+    background-color: #0a0f1c;
+    color: var(--text-primary);
+}
