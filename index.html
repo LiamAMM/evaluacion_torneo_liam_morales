@@ -1,6 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Torneos Gamer</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -8,47 +12,57 @@
     <header>
         <h1>Dashboard de Torneos Gamer</h1>
     </header>
+
     <section id="torneos">
         <h2>Registro de Torneos</h2>
 
-        <input type="text" id="txtNombreTorneo" placeholder="Nombre del torneo">
-        <br>
-        <span id="msgNombreTorneo" class="error"></span>
-        <br>
-        <input type="text" id="txtCategoria" placeholder="Categoría">
-        <br>
-        <span id="msgCategoria" class="error"></span>
-        <br>
-        <input type="number" id="txtParticipantes" placeholder="Participantes">
-        <br>
-        <span id="msgParticipantes" class="error"></span>
-        <br>
-        <input type="number" id="txtValorInscripcion" placeholder="Valor de inscripción">
-        <br>
-        <span id="msgValorInscripcion" class="error"></span>
-        <br>
-        <input type="text" id="txtEmail" placeholder="Email del organizador">
-        <br>
-        <span id="msgEmail" class="error"></span>
-        <br>
+        <div class="formulario">
+            <div class="campo-texto">
+                <input type="text" id="txtNombreTorneo" placeholder="Nombre del torneo">
+                <span id="msgNombreTorneo" class="error"></span>
+            </div>
+
+            <div class="campo-texto">
+                <input type="text" id="txtCategoria" placeholder="Categoría">
+                <span id="msgCategoria" class="error"></span>
+            </div>
+
+            <div class="campo-texto">
+                <input type="number" id="txtParticipantes" placeholder="Participantes">
+                <span id="msgParticipantes" class="error"></span>
+            </div>
+
+            <div class="campo-texto">
+                <input type="number" id="txtValorInscripcion" placeholder="Valor de inscripción">
+                <span id="msgValorInscripcion" class="error"></span>
+            </div>
+
+            <div class="campo-texto ancho-completo">
+                <input type="text" id="txtEmail" placeholder="Email del organizador">
+                <span id="msgEmail" class="error"></span>
+            </div>
+        </div>
 
         <button onclick="registrarTorneo()">Registrar Torneo</button>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre del torneo</th>
-                    <th>Categoría</th>
-                    <th>Participantes</th>
-                    <th>Valor inscripción</th>
-                    <th>Email</th>
-                    <th>Recaudacion Estimada</th>
-                </tr>
-            </thead>
-            <tbody id="tablaParticipantes">
-            </tbody>
-        </table>
+        <div class="contenedor-tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre del torneo</th>
+                        <th>Categoría</th>
+                        <th>Participantes</th>
+                        <th>Valor inscripción</th>
+                        <th>Email</th>
+                        <th>Recaudacion Estimada</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaParticipantes">
+                </tbody>
+            </table>
+        </div>
     </section>
+
     <script src="dashboard.js"></script>
     <script src="utilitarios.js"></script>
 </body>
