@@ -83,3 +83,30 @@ function registrarTorneo() {
  * Actividad 5. Mostrar los torneos (15 puntos)
  * 24. Crear la función mostrarTorneos() sin parámetros.
  */
+function mostrarTorneos() {
+    // 25. Crear una variable vacía para concatenar el HTML
+    let cmpTabla = document.getElementById("tablaParticipantes");
+    let contenidoTabla = "";
+    let torneo;
+    // 26. Recorrer el arreglo torneos utilizando obligatoriamente un ciclo for
+    for (let i = 0; i < torneos.length; i++) {
+        torneo = torneos[i];
+        contenidoTabla += "<tr>" +
+            "<td>" + torneo.nombre + "</td>" +
+            "<td>" + torneo.categoria + "</td>" +
+            "<td>" + torneo.participantes + "</td>" +
+            "<td>" + torneo.valorInscripcion + "</td>" +
+            "<td>" + torneo.email + "</td>" +
+            "<td>" + torneo.recaudacion + "</td>" +
+            "</tr>";
+    }
+
+    // 27. En cada vuelta, obtener el objeto actual y construir una fila de la tabla (<tr>...</tr>)
+
+    // 28. Mostrar todos los datos y la recaudación calculada
+
+    // 29. Insertar el HTML final en el cuerpo de la tabla sin duplicar filas (using innerHTML)
+    cmpTabla.innerHTML = contenidoTabla;
+}
+
+
