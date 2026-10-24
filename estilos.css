@@ -43,7 +43,7 @@ header h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     background: linear-gradient(135deg, var(--primary-neon) 0%, #ffffff 50%, var(--accent-red) 100%);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /* Asegura que el gradiente se aplique solo al texto */
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
 }
