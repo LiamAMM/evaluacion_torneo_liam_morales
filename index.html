@@ -1,7 +1,6 @@
 <html>
 
 <head>
-    <script src="dashboard.js"></script>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -14,15 +13,23 @@
 
         <input type="text" id="txtNombreTorneo" placeholder="Nombre del torneo">
         <br>
+        <span id="msgNombreTorneo"></span>
+        <br>
         <input type="text" id="txtCategoria" placeholder="Categoría">
+        <br>
+        <span id="msgCategoria"></span>
         <br>
         <input type="text" id="txtParticipantes" placeholder="Participantes">
         <br>
-        <input type="number" id="txtValorInscripcion" placeholder="Valor de inscripción">
+        <span id="msgParticipantes"></span>
+        <br>
+        <input type="text" id="txtValorInscripcion" placeholder="Valor de inscripción">
+        <br>
+        <span id="msgValorInscripcion"></span>
         <br>
         <input type="text" id="txtEmail" placeholder="Email del organizador">
         <br>
-
+        <span id="msgEmail"></span>
         <br>
 
         <button onclick="registrarTorneo()">Registrar Torneo</button>
@@ -42,6 +49,8 @@
             </tbody>
         </table>
     </section>
+    <script src="dashboard.js"></script>
+    <script src="utilitarios.js"></script>
 </body>
 
 </html>
