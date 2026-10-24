@@ -1,0 +1,10 @@
+Actúa como un diseñador gráfico senior experto y desarrollo Frontend moderno. Necesito que rediseñes por completo el aspecto visual de esta página web para que tenga un enfoque profesional, moderno y visualmente muy atractivo (estilo Torneo Gamer). 
+
+Para ello, toma como referencia la identidad visual de un formulario gamer o ficticia (tipografías limpias para complementar el estilo gamer).
+
+Reglas obligatorias:
+1. Respetar estrictamente todos los id y class actuales del HTML no modificar nada mas para no romper la funcionalidad o los scripts existentes.
+2. Hacer el diseño 100% responsive (adaptable a móviles, tablets y escritorios mediante CSS).
+3. Añadir micro-interacciones profesionales con CSS (transiciones suaves en botones al hacer hover, Aplicar un efecto hover a las
+filas de la tabla al pasar el cursor, debe cambiar el color de fondo manteniendo el texto legible).
+4. Entregar el código HTML y CSS completo y estructurado, listo para integrarse.
