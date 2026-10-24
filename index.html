@@ -2,10 +2,46 @@
 
 <head>
     <script src="dashboard.js"></script>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
+    <header>
+        <h1>Dashboard de Torneos Gamer</h1>
+    </header>
+    <section id="torneos">
+        <h2>Registro de Torneos</h2>
 
+        <input type="text" id="txtNombreTorneo" placeholder="Nombre del torneo">
+        <br>
+        <input type="text" id="txtCategoria" placeholder="Categoría">
+        <br>
+        <input type="text" id="txtParticipantes" placeholder="Participantes">
+        <br>
+        <input type="number" id="txtValorInscripcion" placeholder="Valor de inscripción">
+        <br>
+        <input type="text" id="txtEmail" placeholder="Email del organizador">
+        <br>
+
+        <br>
+
+        <button onclick="registrarTorneo()">Registrar Torneo</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del torneo</th>
+                    <th>Categoría</th>
+                    <th>Participantes</th>
+                    <th>Valor inscripción</th>
+                    <th>Email</th>
+                    <th>Recaudacion Estimada</th>
+                </tr>
+            </thead>
+            <tbody id="tablaParticipantes">
+            </tbody>
+        </table>
+    </section>
 </body>
 
 </html>
