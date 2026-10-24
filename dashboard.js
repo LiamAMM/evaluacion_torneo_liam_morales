@@ -109,4 +109,21 @@ function mostrarTorneos() {
     cmpTabla.innerHTML = contenidoTabla;
 }
 
+/**
+ * Actividad 6. Limpiar el formulario (5 puntos)
+ * 30. Crear la función limpiarFormulario().
+ */
+function limpiarFormulario() {
+    // 31. Vaciar los campos del formulario, restablecer la categoría y limpiar los mensajes de error
+    document.getElementById("txtNombreTorneo").value = "";
+    document.getElementById("txtCategoria").value = "";
+    document.getElementById("txtParticipantes").value = "";
+    document.getElementById("txtValorInscripcion").value = "";
+    document.getElementById("txtEmail").value = "";
+    document.getElementById("msgNombreTorneo").textContent = "";
+    document.getElementById("msgCategoria").textContent = "";
+    document.getElementById("msgParticipantes").textContent = "";
+    document.getElementById("msgValorInscripcion").textContent = "";
+    document.getElementById("msgEmail").textContent = "";
+}
 
